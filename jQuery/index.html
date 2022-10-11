@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <Style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            margin: 50px auto;
+        }
+
+        .cyan{
+            background-color: cyan;
+        }
+
+        .second-box{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+    </Style>
+</head>
+<body>
+    <button>Click me</button>
+    <input type="text">
+
+    <div class="box"></div>
+    <div class="second-box"></div>
+
+    <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></Script>
+    <Script>
+        $(document).ready(function() {
+            console.log("I am ready")
+            // jQuery ready
+            const $box = $('.box')
+            const $secondBox = $('.second-box')
+            
+            $(document).on("click", "button", function () {
+                $box.toggleClass("cyan")
+                $box.slideToggle()
+                console.log("I was clicked")
+                
+            })
+
+            $box
+                .on("mouseenter", function(){
+                    
+                    console.log('your mouse entered the box')
+                })
+                .on("mouseleave", function(){
+                    console.log('just left')
+                })
+
+            $secondBox.css({
+                backgroundColor: "gray",
+                border: "10px black",
+                borderRadius: "50%",
+                margin: "10px auto" 
+            })
+
+
+
+
+
+        })
+
+
+    </Script>
+</body>
+</html>
