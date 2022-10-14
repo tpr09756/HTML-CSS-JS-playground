@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor</title>
+</head>
+<body>
+    <section>
+        <h1>Custom Cursor</h1>
+        <a href="#">Hover me</a>
+    </section>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script>
+        var cursor = document.querySelector('.cursor');
+        var cursorinner = document.querySelector('.cursor2');
+        var a = document.querySelector('a');
+        document.addEventListener('mousemove', function(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px -50%), 0)` 
+        });
+        document.addEventListener('mousemove', function (e) {
+            var x = e.clientX;
+            var x = e.clientY;
+            cursorinner.style.left = x + 'px';
+            cursorinner.style.top = y + 'px';
+        });
+        document.addEventListener('mousedown', function() {
+            cursor.classList.add('click');
+            cursorinner.classList.add('mouseinnerhover');
+        });
+        document.addEventListener('mouseup', function() {
+            cursor.classList.remove('click');
+            cursorinner.classList.remove('mouseinnerhover');
+        });
+        a.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                cursor.classList.add('hover');
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        })
+    </script>
+    
+</body>
+</html>
