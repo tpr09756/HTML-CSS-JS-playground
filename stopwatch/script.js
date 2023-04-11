@@ -30,6 +30,7 @@ window.onload = function () {
     li.innerHTML = `lap: <span>${minutes.innerHTML}:${seconds.innerHTML},${tens.innerHTML}</span>`;
 
     lap.appendChild(li);
+    dimEffect();
   };
 
   // Reset Button
