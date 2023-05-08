@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/75e53ee709.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Simple form validation</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm" action="https://www.google.com">
+        <div class="form-field">
+          <label for="loginUsername">User Name</label>
+          <input type="text" id="loginUsername" placeholder="Enter user name" />
+          <small class="alert-message">Error</small>
+        </div>
+        <div class="form-field">
+          <label for="loginPassword">Password</label>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter user password"
+          />
+          <small class="alert-message">Error</small>
+        </div>
+        <div class="form-filed">
+          <i class="far fa-eye"></i>
+          <label>Show/Hide Password</label>
+        </div>
+        <button class="btn" type="submit">Go</button>
+      </form>
+      <div class="reset-password">
+        <small><a href="#">Forgot User name or Password</a></small>
+      </div>
+      <form class="form-request">
+        <div class="form field">
+          <label for="requestEmail">Email</label>
+          <input
+            type="email"
+            id="requestEmail"
+            placeholder="Enter your email"
+          />
+          <small class="alert-message">Error</small>
+        </div>
+        <button class="btn red" type="submit">Request</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
